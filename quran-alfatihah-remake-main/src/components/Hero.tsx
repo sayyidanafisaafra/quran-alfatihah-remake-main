@@ -14,7 +14,7 @@ const Hero = () => {
                 <span className="text-gradient-primary">
                   Quran Indonesia
                 </span>{' '}
-                untuk Umat
+                untuk Santri
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                 Berwakaf Al-Qur'an untuk kebaikan yang mengalir terus
@@ -23,7 +23,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground max-w-lg">
-                Bergabunglah dengan ribuan donatur yang telah mewakafkan Al-Qur'an untuk disebarluaskan kepada umat Islam di seluruh Indonesia.
+                Bergabunglah dengan ribuan donatur yang telah mewakafkan Al-Qur'an untuk disebarluaskan kepada santri di seluruh Indonesia.
               </p>
             </div>
 

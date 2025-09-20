@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Islamic Educational Design System - Inspired by Rumah Quran Alfatihah
-All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
+All colors MUST be HSL. Balanced 3-color orange gradient for optimal readability and visual appeal.
 */
 
 @layer base {
@@ -20,11 +20,11 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
     --popover: 0 0% 100%;
     --popover-foreground: 243 23% 12%;
 
-    /* Primary - Deep Islamic Purple */
-    --primary: 262 57% 42%;
+    /* Primary - Balanced Orange Gradient */
+    --primary: 36 90% 54%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 262 50% 60%;
-    --primary-dark: 262 65% 25%;
+    --primary-light: 39 87% 56%;
+    --primary-dark: 33 79% 45%;
 
     /* Secondary - Warm Islamic Gold */
     --secondary: 43 96% 56%;
@@ -36,9 +36,9 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%;
 
-    /* Accent - Light purple for highlights */
-    --accent: 262 40% 95%;
-    --accent-foreground: 262 57% 42%;
+    /* Accent - Light orange for highlights */
+    --accent: 39 87% 92%;
+    --accent-foreground: 33 79% 40%;
 
     /* Status colors */
     --destructive: 0 84% 60%;
@@ -49,18 +49,18 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
     /* Border and input */
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 262 57% 42%;
+    --ring: 36 90% 54%;
 
     /* Islamic gradient system */
-    --gradient-primary: linear-gradient(135deg, hsl(262 57% 42%), hsl(262 65% 25%));
+    --gradient-primary: linear-gradient(135deg, hsl(33 79% 53%), hsl(36 90% 54%), hsl(39 87% 56%));
     --gradient-secondary: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 100% 40%));
-    --gradient-hero: linear-gradient(135deg, hsl(262 57% 42%) 0%, hsl(282 70% 50%) 50%, hsl(43 96% 56%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(262 20% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(33 79% 53%) 0%, hsl(36 90% 54%) 50%, hsl(39 87% 56%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(39 25% 96%) 100%);
 
     /* Shadows with Islamic theme */
-    --shadow-primary: 0 10px 40px -10px hsl(262 57% 42% / 0.25);
+    --shadow-primary: 0 10px 40px -10px hsl(36 90% 54% / 0.3);
     --shadow-secondary: 0 8px 30px -8px hsl(43 96% 56% / 0.3);
-    --shadow-elegant: 0 20px 60px -15px hsl(262 30% 20% / 0.15);
+    --shadow-elegant: 0 20px 60px -15px hsl(33 30% 25% / 0.2);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,11 +96,11 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
     --popover: 243 20% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primary - Lighter purple for dark mode */
-    --primary: 262 50% 60%;
+    /* Primary - Balanced orange for dark mode */
+    --primary: 36 90% 62%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 262 45% 75%;
-    --primary-dark: 262 60% 45%;
+    --primary-light: 39 87% 65%;
+    --primary-dark: 33 79% 55%;
 
     /* Secondary - Warmer gold for dark mode */
     --secondary: 43 90% 65%;
@@ -111,8 +111,8 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
     --muted: 243 15% 15%;
     --muted-foreground: 243 8% 65%;
 
-    --accent: 262 30% 20%;
-    --accent-foreground: 262 50% 80%;
+    --accent: 33 25% 18%;
+    --accent-foreground: 39 87% 70%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
@@ -121,16 +121,16 @@ All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
 
     --border: 243 15% 20%;
     --input: 243 15% 20%;
-    --ring: 262 50% 60%;
+    --ring: 36 90% 62%;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 50% 60%), hsl(262 60% 45%));
+    --gradient-primary: linear-gradient(135deg, hsl(33 79% 60%), hsl(36 90% 62%), hsl(39 87% 65%));
     --gradient-secondary: linear-gradient(135deg, hsl(43 90% 65%), hsl(43 95% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(262 50% 60%) 0%, hsl(282 60% 55%) 50%, hsl(43 90% 65%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(243 20% 8%) 0%, hsl(262 15% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(33 79% 60%) 0%, hsl(36 90% 62%) 50%, hsl(39 87% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(243 20% 8%) 0%, hsl(36 20% 12%) 100%);
 
     /* Dark shadows */
-    --shadow-primary: 0 10px 40px -10px hsl(262 50% 20% / 0.4);
+    --shadow-primary: 0 10px 40px -10px hsl(36 90% 35% / 0.4);
     --shadow-secondary: 0 8px 30px -8px hsl(43 90% 30% / 0.3);
     --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.3);
     --sidebar-background: 240 5.9% 10%;

@@ -76,7 +76,6 @@ const Contact = () => {
                   <select className="w-full p-3 border border-border rounded-lg focus:border-primary focus:outline-none bg-background">
                     <option value="">Pilih program wakaf</option>
                     <option value="mushaf">Wakaf Mushaf Al-Qur'an</option>
-                    <option value="braille">Wakaf Al-Qur'an Braille</option>
                     <option value="digital">Wakaf Al-Qur'an Digital</option>
                   </select>
                 </div>

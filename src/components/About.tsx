@@ -73,6 +73,17 @@ const About = () => {
                 </li>
               </ul>
             </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-primary">Didukung Oleh</h3>
+              <div className="bg-gradient-to-r from-accent/20 to-accent/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-muted-foreground leading-relaxed">
+                  Program ini didukung penuh oleh <span className="font-semibold text-primary">Bengkel Dakwah</span> dan 
+                  <span className="font-semibold text-primary"> Griya Multimedia Putri Indonesia</span>, 
+                  yang berkomitmen untuk menyebarluaskan Al-Qur'an ke seluruh nusantara.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Stats Grid */}

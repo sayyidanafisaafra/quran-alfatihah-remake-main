@@ -4,7 +4,6 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Beranda', href: '#home' },
     { name: 'Wakaf Mushaf', href: '#programs' },
-    { name: 'Wakaf Braille', href: '#programs' },
     { name: 'Wakaf Digital', href: '#programs' },
   ];
 

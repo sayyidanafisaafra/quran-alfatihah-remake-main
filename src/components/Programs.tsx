@@ -19,22 +19,12 @@ const Programs = () => {
     },
     {
       id: 2,
-      title: "Wakaf Al-Qur'an Braille",
-      description: "Program khusus untuk mewakafkan Al-Qur'an braille bagi saudara-saudara kita yang tunanetra agar dapat merasakan keindahan membaca Al-Qur'an.",
-      image: tahfidzImage,
-      features: ["Teknologi Braille", "Kualitas Terjamin", "Akses Mudah"],
-      duration: "Berkelanjutan",
-      students: "20+ Yayasan/Bulan",
-      link: "#braille"
-    },
-    {
-      id: 3,
-      title: "Wakaf Iqro",
-      description: "Program wakaf untuk mencetak dan mendistribusikan buku Iqro sebagai panduan belajar membaca Al-Qur'an bagi anak-anak dan pemula di seluruh Indonesia.",
+      title: "Wakaf Al-Qur'an Digital",
+      description: "Program wakaf untuk pengembangan aplikasi Al-Qur'an digital yang dapat diakses gratis oleh seluruh umat Islam di Indonesia.",
       image: kidsImage,
-      features: ["Metode Mudah", "Untuk Pemula", "Panduan Lengkap"],
+      features: ["Akses Gratis", "Audio Berkualitas", "Fitur Lengkap"],
       duration: "Berkelanjutan",
-      students: "500+ Siswa/Bulan",
+      students: "100.000+ Pengguna",
       link: "#digital"
     }
   ];
@@ -53,7 +43,7 @@ const Programs = () => {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {programs.map((program, index) => (
             <Card 
               key={program.id} 
