@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { BookOpen, Users, Award, Heart } from 'lucide-react';
-// Test comment for Vercel deployment verification
 
 const About = () => {
   const stats = [
