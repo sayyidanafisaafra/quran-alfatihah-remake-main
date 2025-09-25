@@ -28,7 +28,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      name: "Ibu Uli Majeis Mutia",
+      name: "Ibu Uli Majelis Mutia",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Jazakumullahu khairan. Program wakaf yang sangat baik dan terpercaya. Update rutin di grup WhatsApp membuat saya selalu tahu perkembangan program ini.",
       rating: 5

@@ -99,7 +99,7 @@ const About = () => {
                     <stat.icon className={`w-8 h-8 ${stat.color}`} />
                   </div>
                   <div>
-                    <div className={`text-3xl font-bold ${stat.color}`}>
+                    <div className={`text-xl md:text-3xl font-bold ${stat.color}`}>
                       {stat.number}
                     </div>
                     <div className="text-sm text-muted-foreground font-medium">
