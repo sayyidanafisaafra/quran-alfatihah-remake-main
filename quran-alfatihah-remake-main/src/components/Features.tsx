@@ -1,5 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { AccessibilityIcon, Clock, Users, Heart, DollarSign, UserCheck, BookOpen } from 'lucide-react';
+import { AccessibilityIcon, Clock, Users, Heart, UserCheck, BookOpen } from 'lucide-react';
+
+// Custom Rupiah Icon Component
+const RupiahIcon = ({ className }: { className?: string }) => (
+  <div className={`flex items-center justify-center font-bold text-lg ${className}`}>
+    Rp
+  </div>
+);
 
 const Features = () => {
   const features = [
@@ -28,7 +35,7 @@ const Features = () => {
       color: "text-secondary"
     },
     {
-      icon: DollarSign,
+      icon: RupiahIcon,
       title: "Nominal Fleksibel",
       description: "Dapat berwakaf dengan nominal yang sesuai kemampuan, mulai dari jumlah kecil hingga besar",
       color: "text-primary"

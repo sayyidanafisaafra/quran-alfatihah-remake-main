@@ -2,6 +2,19 @@ import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-islamic.jpg';
 
 const Hero = () => {
+  const handleWakafClick = () => {
+    const phoneNumber = '+6282223501945';
+    const message = 'Halo, saya tertarik untuk berwakaf Al-Quran. Mohon informasi lebih lanjut.';
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleProgramClick = () => {
+    const programSection = document.getElementById('programs');
+    if (programSection) {
+      programSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-background via-accent/20 to-background islamic-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -31,6 +44,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-primary-foreground transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary px-8 py-6 text-lg"
+                onClick={handleWakafClick}
               >
                 Wakaf Sekarang
               </Button>
@@ -38,8 +52,9 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-6 text-lg transition-all duration-300"
+                onClick={handleProgramClick}
               >
-                Pelajari Program Wakaf
+                Program Wakaf
               </Button>
             </div>
           </div>

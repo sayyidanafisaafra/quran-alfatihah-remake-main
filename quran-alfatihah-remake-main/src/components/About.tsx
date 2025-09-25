@@ -5,14 +5,14 @@ const About = () => {
   const stats = [
     {
       icon: Users,
-      number: "5000+",
+      number: "1000+",
       label: "Donatur Aktif",
       color: "text-primary"
     },
     {
       icon: BookOpen,
-      number: "50.000+",
-      label: "Al-Qur'an Terdistribusi",
+      number: "20.000+",
+      label: "Target Distribusi Al-Quran Pertahun",
       color: "text-secondary"
     },
     {
@@ -24,7 +24,7 @@ const About = () => {
     {
       icon: Heart,
       number: "25",
-      label: "Provinsi di Indonesia",
+      label: "Area Jawa dan Sekitarnya",
       color: "text-secondary"
     }
   ];
@@ -43,16 +43,16 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6 animate-slide-in-left">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Bengkel Dakwah dan Griya Multimedia Putri Indonesia mendedikasikan untuk menyebarluaskan Al-Qur'an ke area Jawa dan sekitarnya. 
+              <span className="text-gradient-primary font-semibold">Bengkel Dakwah dan Griya Multimedia Putri Indonesia</span> mendedikasikan diri untuk menyebarluaskan Al-Qur'an ke area Jawa dan sekitarnya. 
               Kami mengelola wakaf dari para donatur untuk dicetak dan didistribusikan dalam bentuk mushaf Al-Qur'an 
-              berkualitas tinggi kepada masjid, pondok pesantren, dan masyarakat yang membutuhkan.
+              berkualitas kepada masjid, pondok pesantren, dan masyarakat yang membutuhkan.
             </p>
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">Visi Kami</h3>
               <p className="text-muted-foreground">
-                Menjadi lembaga wakaf Al-Qur'an terpercaya yang memastikan setiap muslim Indonesia memiliki akses 
-                mudah terhadap mushaf Al-Qur'an berkualitas tinggi untuk kebutuhan ibadah dan pembelajaran.
+                Menjadi komunitas wakaf Al-Qur'an terpercaya yang memastikan setiap muslim Indonesia memiliki akses 
+                mudah terhadap mushaf Al-Qur'an berkualitas untuk kebutuhan ibadah dan pembelajaran.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Mendistribusikan mushaf Al-Qur'an berkualitas ke seluruh Indonesia secara merata
+                  Mendistribusikan mushaf Al-Qur'an berkualitas ke area Jawa dan sekitarnya secara merata
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
