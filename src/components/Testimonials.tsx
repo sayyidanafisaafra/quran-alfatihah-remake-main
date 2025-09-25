@@ -4,37 +4,37 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Ahmad Fauzi",
+      name: "Ibu Mulyani",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Alhamdulillah sangat terbantu dengan adanya program wakaf ini. Laporan yang diberikan sangat transparan dan saya bisa melihat langsung dampak wakaf yang saya berikan.",
       rating: 5
     },
     {
-      name: "Siti Aminah",
+      name: "Ibu Erti",
       role: "Donatur Wakaf Quran Indonesia", 
       content: "Subhanallah, program wakaf Al-Qur'an ini sangat memudahkan. Saya bisa berwakaf dari rumah dan tahu persis kemana Al-Qur'an itu disalurkan. Semoga menjadi amal jariyah.",
       rating: 5
     },
     {
-      name: "Budi Santoso",
+      name: "Bapak Agus Yulianto",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Tim Wakaf Quran Indonesia sangat profesional dan amanah. Setiap bulan selalu ada laporan distribusi. Merasa senang bisa berkontribusi menyebarkan Al-Qur'an.",
       rating: 5
     },
     {
-      name: "Fatimah Zahra",
+      name: "Ustadz. Hangga",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Alhamdulillah dengan adanya program ini, saya bisa ikut berkontribusi menyebarkan Al-Qur'an ke seluruh Indonesia. Prosesnya mudah dan sangat transparan.",
       rating: 5
     },
     {
-      name: "Muhammad Ikhsan",
+      name: "Ibu Uli Majeis Mutia",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Jazakumullahu khairan. Program wakaf yang sangat baik dan terpercaya. Update rutin di grup WhatsApp membuat saya selalu tahu perkembangan program ini.",
       rating: 5
     },
     {
-      name: "Khadijah",
+      name: "Mbak Widuri",
       role: "Donatur Wakaf Quran Indonesia",
       content: "Sangat senang bisa bergabung dalam program wakaf ini. Tim yang profesional dan sistem yang transparan membuat saya yakin wakaf saya tersalurkan dengan baik.",
       rating: 5

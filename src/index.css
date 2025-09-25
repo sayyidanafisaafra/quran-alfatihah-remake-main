@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Islamic Educational Design System - Inspired by Rumah Quran Alfatihah
-All colors MUST be HSL. Balanced 3-color orange gradient for optimal readability and visual appeal.
+All colors MUST be HSL. Purple and gold theme for spirituality and wisdom.
 */
 
 @layer base {
@@ -20,8 +20,8 @@ All colors MUST be HSL. Balanced 3-color orange gradient for optimal readability
     --popover: 0 0% 100%;
     --popover-foreground: 243 23% 12%;
 
-    /* Primary - Balanced Orange Gradient */
-    --primary: 36 90% 54%;
+    /* Primary - Warm Islamic Orange */
+    --primary: 33 79% 53%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 39 87% 56%;
     --primary-dark: 33 79% 45%;
@@ -60,7 +60,7 @@ All colors MUST be HSL. Balanced 3-color orange gradient for optimal readability
     /* Shadows with Islamic theme */
     --shadow-primary: 0 10px 40px -10px hsl(36 90% 54% / 0.3);
     --shadow-secondary: 0 8px 30px -8px hsl(43 96% 56% / 0.3);
-    --shadow-elegant: 0 20px 60px -15px hsl(33 30% 25% / 0.2);
+    --shadow-elegant: 0 20px 60px -15px hsl(33 50% 25% / 0.15);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,7 +96,7 @@ All colors MUST be HSL. Balanced 3-color orange gradient for optimal readability
     --popover: 243 20% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primary - Balanced orange for dark mode */
+    /* Primary - Warmer orange for dark mode */
     --primary: 36 90% 62%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 39 87% 65%;

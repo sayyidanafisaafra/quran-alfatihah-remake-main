@@ -4,7 +4,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Beranda', href: '#home' },
     { name: 'Wakaf Mushaf', href: '#programs' },
-    { name: 'Wakaf Digital', href: '#programs' },
+    { name: 'Wakaf Iqro', href: '#programs' },
   ];
 
   const services = [
@@ -96,12 +96,13 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-secondary flex-shrink-0" />
                 <p className="text-sm opacity-90">
-                  Pondok multimedia putri bengkel dakwah Kalak Ijo, Guwosari, Kec. Pajangan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55751
+                  Jl. Dakwah Islamiyah No. 456<br />
+                  Jakarta Pusat, Indonesia
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                <p className="text-sm opacity-90">+6282223501945</p>
+                <p className="text-sm opacity-90">+62 812-3456-7890</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary flex-shrink-0" />

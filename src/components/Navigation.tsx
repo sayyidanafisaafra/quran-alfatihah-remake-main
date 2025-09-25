@@ -1,51 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, MessageCircle, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollTimeout, setScrollTimeout] = useState<NodeJS.Timeout | null>(null);
-
-  // Auto close mobile menu on any scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Close mobile menu immediately when scrolling starts (any direction)
-      if (Math.abs(currentScrollY - lastScrollY) > 5 && isOpen) {
-        setIsOpen(false);
-      }
-      
-      // Clear existing timeout
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-      
-      // Set new timeout to update lastScrollY after scroll stops
-      const newTimeout = setTimeout(() => {
-        setLastScrollY(currentScrollY);
-      }, 100);
-      
-      setScrollTimeout(newTimeout);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-    };
-  }, [lastScrollY, isOpen, scrollTimeout]);
-
-  const handleChatAdminClick = () => {
-    const phoneNumber = '+6282223501945';
-    const message = 'Halo Admin, saya ingin bertanya tentang program wakaf Al-Quran.';
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
 
   const navItems = [
     { name: 'Beranda', href: '#home' },
@@ -56,16 +14,16 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-primary to-primary-dark backdrop-blur-sm border-b border-border sticky top-0 z-[9999]">
+    <nav className="bg-gradient-to-r from-primary-light to-primary backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-white to-gray-200 rounded-lg flex items-center justify-center">
-              <BookOpen className="text-primary w-5 h-5" />
+            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+              <BookOpen className="text-orange-500 w-5 h-5" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold text-white">
                 Wakaf Quran Indonesia
               </h1>
             </div>
@@ -86,11 +44,7 @@ const Navigation = () => {
 
           {/* Chat Admin Button */}
           <div className="hidden md:block">
-            <Button 
-              variant="outline" 
-              className="bg-white text-primary hover:bg-gray-100 border-white"
-              onClick={handleChatAdminClick}
-            >
+            <Button variant="outline" className="bg-white text-primary hover:bg-gray-100 border-white">
               <MessageCircle className="w-4 h-4 mr-2" />
               Chat Admin
             </Button>
@@ -123,10 +77,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button 
-                className="w-full mt-4 bg-white text-primary hover:bg-gray-100"
-                onClick={handleChatAdminClick}
-              >
+              <Button className="w-full mt-4 bg-white text-primary hover:bg-gray-100">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Chat Admin
               </Button>

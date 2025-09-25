@@ -3,8 +3,17 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    whatsapp: '',
+    email: '',
+    program: '',
+    message: ''
+  });
+
   const handleWhatsAppClick = () => {
     const phoneNumber = '+6282223501945';
     const message = 'Halo, saya ingin mengetahui lebih lanjut tentang program wakaf Al-Quran.';
@@ -12,11 +21,38 @@ const Contact = () => {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleSendMessage = () => {
+    const phoneNumber = '+6282223501945';
+    let message = `Halo, saya ingin mengetahui lebih lanjut tentang program wakaf Al-Quran.\n\n`;
+    message += `Nama: ${formData.name || 'Tidak diisi'}\n`;
+    message += `WhatsApp: ${formData.whatsapp || 'Tidak diisi'}\n`;
+    message += `Email: ${formData.email || 'Tidak diisi'}\n`;
+    message += `Program: ${formData.program || 'Tidak diisi'}\n`;
+    message += `Pesan: ${formData.message || 'Tidak ada pesan tambahan'}`;
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleCallClick = () => {
+    const phoneNumber = '+6282223501945';
+    const message = 'Halo, saya ingin konsultasi langsung tentang program wakaf Al-Quran. Bisakah saya berbicara dengan admin?';
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
   const contactInfo = [
     {
       icon: Phone,
       title: "Telepon",
-      detail: "+6282223501945",
+      detail: "+62 812-3456-7890",
       color: "text-primary"
     },
     {
@@ -28,7 +64,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Alamat",
-      detail: "Pondok multimedia putri bengkel dakwah Kalak Ijo, Guwosari, Kec. Pajangan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55751",
+      detail: "Jl. Dakwah Islamiyah No. 456, Jakarta Pusat",
       color: "text-primary"
     },
     {
@@ -65,37 +101,68 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">Nama Lengkap</label>
-                    <Input placeholder="Masukkan nama lengkap" className="border-border focus:border-primary" />
+                    <Input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Masukkan nama lengkap" 
+                      className="border-border focus:border-primary" 
+                    />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">Nomor WhatsApp</label>
-                    <Input placeholder="08xxxxxxxxx" className="border-border focus:border-primary" />
+                    <Input 
+                      name="whatsapp"
+                      value={formData.whatsapp}
+                      onChange={handleInputChange}
+                      placeholder="08xxxxxxxxx" 
+                      className="border-border focus:border-primary" 
+                    />
                   </div>
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input type="email" placeholder="email@example.com" className="border-border focus:border-primary" />
+                  <Input 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    type="email" 
+                    placeholder="email@example.com" 
+                    className="border-border focus:border-primary" 
+                  />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">Program Wakaf yang Diminati</label>
-                  <select className="w-full p-3 border border-border rounded-lg focus:border-primary focus:outline-none bg-background">
+                  <select 
+                    name="program"
+                    value={formData.program}
+                    onChange={handleInputChange}
+                    className="w-full p-3 border border-border rounded-lg focus:border-primary focus:outline-none bg-background"
+                  >
                     <option value="">Pilih program wakaf</option>
                     <option value="mushaf">Wakaf Mushaf Al-Qur'an</option>
-                    <option value="digital">Wakaf Al-Qur'an Digital</option>
+                    <option value="iqro">Wakaf Iqro</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">Pesan</label>
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder="Tulis pesan Anda di sini..." 
                     className="min-h-[120px] border-border focus:border-primary resize-none"
                   />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-primary-foreground transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <Button 
+                  type="button"
+                  onClick={handleSendMessage}
+                  className="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-primary-foreground transform hover:scale-105 transition-all duration-300 shadow-lg"
+                >
                   Kirim Pesan
                 </Button>
               </form>
@@ -139,7 +206,11 @@ const Contact = () => {
                   </div>
                 </Button>
                 
-                <Button variant="outline" className="justify-start border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-6 h-auto transition-all duration-300">
+                <Button 
+                  variant="outline" 
+                  className="justify-start border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-6 h-auto transition-all duration-300"
+                  onClick={handleCallClick}
+                >
                   <Phone className="w-5 h-5 mr-3" />
                   <div className="text-left">
                     <div className="font-semibold">Telepon Langsung</div>

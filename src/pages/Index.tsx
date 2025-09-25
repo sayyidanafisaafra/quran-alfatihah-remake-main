@@ -5,10 +5,8 @@ import Programs from '@/components/Programs';
 import Features from '@/components/Features';
 import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
@@ -21,11 +19,9 @@ const Index = () => {
         <Features />
         <Benefits />
         <Testimonials />
-        <FAQ />
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

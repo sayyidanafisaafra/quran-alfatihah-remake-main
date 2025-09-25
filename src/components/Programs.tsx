@@ -6,11 +6,17 @@ import tahfidzImage from '@/assets/tahfidz-online.jpg';
 import kidsImage from '@/assets/kids-class.jpg';
 
 const Programs = () => {
+  const handleWakafClick = (programTitle: string) => {
+    const phoneNumber = '+6282223501945';
+    const message = `Halo, saya tertarik untuk bergabung dalam program ${programTitle}. Mohon informasi lebih lanjut tentang cara berpartisipasi.`;
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
   const programs = [
     {
       id: 1,
       title: "Wakaf Mushaf Al-Qur'an",
-      description: "Program wakaf untuk mencetak dan mendistribusikan mushaf Al-Qur'an berkualitas tinggi ke masjid dan pondok pesantren di seluruh Indonesia.",
+      description: "Program wakaf untuk mencetak dan mendistribusikan mushaf Al-Qur'an berkualitas tinggi ke masjid dan pondok pesantren di area Jawa dan sekitarnya.",
       image: tahsinImage,
       features: ["Mushaf Berkualitas", "Distribusi Merata", "Laporan Transparan"],
       duration: "Berkelanjutan",
@@ -19,8 +25,8 @@ const Programs = () => {
     },
     {
       id: 2,
-      title: "Wakaf Al-Qur'an Digital",
-      description: "Program wakaf untuk pengembangan aplikasi Al-Qur'an digital yang dapat diakses gratis oleh seluruh umat Islam di Indonesia.",
+      title: "Wakaf Iqro",
+      description: "Program wakaf untuk mencetak dan mendistribusikan buku Iqro berkualitas tinggi ke masjid dan pondok pesantren di area Jawa dan sekitarnya.",
       image: kidsImage,
       features: ["Akses Gratis", "Audio Berkualitas", "Fitur Lengkap"],
       duration: "Berkelanjutan",
@@ -94,6 +100,7 @@ const Programs = () => {
                 {/* CTA */}
                 <Button 
                   className="w-full bg-primary hover:bg-primary-dark text-primary-foreground transform hover:scale-105 transition-all duration-300"
+                  onClick={() => handleWakafClick(program.title)}
                 >
                   Wakaf Sekarang
                   <ExternalLink className="w-4 h-4 ml-2" />
