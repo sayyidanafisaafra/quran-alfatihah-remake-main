@@ -30,6 +30,9 @@ const Hero = () => {
                 </span>{' '}
                 untuk Santri
               </h1>
+              <div className="bg-red-500 text-white p-4 rounded-lg mb-4 font-bold text-center">
+                🔄 TEST UPDATE - Website telah diperbarui!
+              </div>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                 Berwakaf Al-Qur'an untuk kebaikan yang mengalir terus
               </p>
