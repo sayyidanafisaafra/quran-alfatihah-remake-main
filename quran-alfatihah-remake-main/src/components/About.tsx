@@ -43,7 +43,7 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6 animate-slide-in-left">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Lembaga wakaf yang didedikasikan untuk menyebarluaskan Al-Qur'an ke seluruh pelosok Indonesia. 
+              Bengkel Dakwah dan Griya Multimedia Putri Indonesia mendedikasikan untuk menyebarluaskan Al-Qur'an ke area Jawa dan sekitarnya. 
               Kami mengelola wakaf dari para donatur untuk dicetak dan didistribusikan dalam bentuk mushaf Al-Qur'an 
               berkualitas tinggi kepada masjid, pondok pesantren, dan masyarakat yang membutuhkan.
             </p>
