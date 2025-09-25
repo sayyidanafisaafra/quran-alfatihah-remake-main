@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
-              Lembaga wakaf yang berkomitmen menyebarluaskan Al-Qur'an ke seluruh Indonesia melalui program wakaf yang amanah dan berkelanjutan.
+              Bengkel Dakwah dan Griya Multimedia Putri Indonesia mendedikasikan untuk menyebarluaskan Al-Qur'an ke area Jawa dan sekitarnya.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
